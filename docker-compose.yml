@@ -1,0 +1,12 @@
+version: '3'
+services:
+  snapserver:
+    image: mmmaxwwwell/snapclient:latest
+    #build: .
+    container_name: snapclient
+    networks:
+      - snapclient
+    env_file:
+      ./settings/common.conf
+networks:
+  snapclient:
